@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>coffeerun</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
   </head>
   <body class="container">
     <header>
@@ -40,6 +42,12 @@
                 Grande
               </label>
             </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="megagrande">
+                Megagrande
+              </label>
+            </div>
             <div class="form-group">
               <label for="flavorShot">Flavor Shot</label>
               <select id="flavorShot" class="form-control" name="flavor">
@@ -59,7 +67,8 @@
             </div>
             <div class="form-group">
               <label for="strengthLevel">Caffeine Ratings</label>
-              <input name="strength" id="strengthLevel" type="range" value="30">
+              <input name="strength" id="strengthLevel" type="range" value="30" oninput="updateStrengthRating(value)">
+              <output for="strengthLevel" id="strength-rating" class="text-center">30</output>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
             <button type="reset" class="btn btn-default">Reset</button>
