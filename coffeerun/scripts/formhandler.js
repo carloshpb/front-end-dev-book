@@ -25,6 +25,7 @@
         console.log(item.name + ' is ' + item.value);
       });
       console.log(data);
+      
       fn(data);
       this.reset();
       this.elements[0].focus();
