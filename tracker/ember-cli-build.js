@@ -29,7 +29,8 @@ module.exports = function(defaults) {
 
   // Create paths to bootstrap assets
   // Add assets to app with import
-  app.import(bootstrapPath + 'javascripts/bootstrap.js');
+  app.import(bootstrapPath + 'javascripts/bootstrap/collapse.js');
+  app.import(bootstrapPath + 'javascripts/bootstrap/transition.js');
 
   return app.toTree();
 };
