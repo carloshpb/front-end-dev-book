@@ -6,7 +6,7 @@ export default DS.Model.extend({
   lName: DS.attr('string'),
   email: DS.attr('string'),
   sightings: DS.hasMany('sighting'),
-  fullName: Ember.computed('fName', 'lName', function(){
-    return this.get('fName') + ' ' + this.get('lName');
+  fullName: Ember.computed('fName', 'email', function(){
+    return this.get('fName') + ' - ' + this.get('email');
   })
 });
